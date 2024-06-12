@@ -1,0 +1,16 @@
+Para correr los test debes ubicarte en el directorio/carpeta donde
+tienes tus test y ejecutar el comando go test
+
+Si quieres obtener unas metricas de coverage de tu codigo puedes
+agregarle la bandera -cover, esto te mostrará en consola el % de
+coverage de tus test
+
+Ejecutar los test con la bandera -coverprofile=coverage.out para obtener un coveragefile
+Esto nos permite saber que parte del código hemos testeado y cual no
+
+Para tener las metricas legibles del resultado del coveragefile usamos:
+
+// ver resumen resumen en la terminal
+go tool cover -func=coverage.out
+// o ver resumen en el navegador
+go tool cover -html=coverage.out 

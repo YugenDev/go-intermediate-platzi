@@ -32,8 +32,31 @@ func TestSum(t *testing.T) {
 
 }
 
-func TestGetMax(t *testing.T){
-	if GetMax(12, 15) != 15 {
-		t.Errorf("GetMax was incorrect, got %d, expected %d", GetMax(12, 15), 15)
+func TestGetMax(t *testing.T) {
+	/*
+		if GetMax(12, 15) != 15 {
+			t.Errorf("GetMax was incorrect, got %d, expected %d", GetMax(12, 15), 15)
+		}
+	*/
+
+	table := []struct {
+		a int
+		b int
+		n int
+	}{
+		{4, 2, 4},
+		{3, 2, 3},
+		{2, 5, 5},
 	}
+
+	for _, item := range table {
+		max := GetMax(item.a, item.b)
+
+		if max != item.n {
+			t.Errorf("GetMax was wrong")
+		}
+
+
+	}
+
 }

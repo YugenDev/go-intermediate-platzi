@@ -1,6 +1,6 @@
 package main
 
-func suma(x,y int) int {
+func suma(x, y int) int {
 	return x + y
 }
 
