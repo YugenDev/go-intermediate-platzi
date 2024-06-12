@@ -56,7 +56,44 @@ func TestGetMax(t *testing.T) {
 			t.Errorf("GetMax was wrong")
 		}
 
-
 	}
 
+}
+
+func TestBadFibonacci(t *testing.T) {
+	table := []struct {
+		a int
+		n int
+	}{
+		{1, 1},
+		{8, 21},
+		{50, 12586269025},
+	}
+
+	for _, item := range table {
+		fib := UneficientFibonacci(item.a)
+
+		if fib != item.n {
+			t.Errorf("Fibonacci was wrong, expected %d, got %d", item.n, fib)
+		}
+	}
+}
+
+func TestGoodFibonacci(t *testing.T) {
+	table := []struct {
+		a int
+		n int
+	}{
+		{1, 1},
+		{8, 21},
+		{50, 12586269025},
+	}
+
+	for _, item := range table {
+		fib := Efficientfibonacci(item.a)
+
+		if fib != item.n {
+			t.Errorf("Fibonacci was wrong, expected %d, got %d", item.n, fib)
+		}
+	}
 }
