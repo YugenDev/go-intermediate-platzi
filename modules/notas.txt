@@ -1,0 +1,28 @@
+--Comandos utiles--
+
+go mod tidy -> Te sirve para eliminar automaticamente los modulos que no se usan! 
+
+
+
+
+--Conceptos--
+
+En go es muy util el go.sum, te brinda una vista de los paquetes que hay en tu proyecto
+y te da una clave hash con la cual puedes hacerle un seguimiento a los cambios para evitar
+la inyección de codigo malicioso
+
+en el go.mod se especifica tu modulo principal o nombre de proyecto, la version de go
+que utiliza y también el listado de los paquetes externos que tienes
+
+En Go, los "paquetes indirectos" son paquetes que no son directamente utilizados por tu código 
+pero son importados por otros paquetes que sí usas. Por ejemplo 
+supongamos que tu código importa el paquete A, y el paquete A importa el paquete B. En este caso
+el paquete B sería un paquete indirecto para tu código.
+
+Los paquetes indirectos pueden afectar el rendimiento de tu aplicación y el tiempo de compilación
+especialmente si se importan muchos paquetes indirectos.
+Es importante ser consciente de estos paquetes para mantener
+un buen rendimiento en tu aplicación y evitar la inclusión de paquetes innecesarios.
+
+Puedes usar varias versiones del mismo paquete al mismo tiempo importandolos
+con el uso de un alias
