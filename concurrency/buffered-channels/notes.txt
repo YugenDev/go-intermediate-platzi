@@ -1,0 +1,19 @@
+Unbuffered channel: Espera una función o una rutina para recibir el mensaje, es bloqueada por ser llamada en la misma función
+
+Buffered channel: Se puede llamar de manera inmediata, en el siguiente ejemplo 2 es el numero de canales que pueden ser usados
+
+
+package main
+
+import "fmt"
+
+func main() {
+  // c := make(chan int) // Unbuffered
+  c := make(chan int, 2) // Buffered
+
+  c <- 1
+  c <- 2
+
+  fmt.Println(<-c)
+  fmt.Println(<-c)
+}

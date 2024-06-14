@@ -1,0 +1,3 @@
+Cuando se trabaja con GoRoutines no siempre se planea que estas envíen datos a través de canales 
+entre unas y otras, en estos casos se puede utilizar un Wait Group para alcanzar ese bloqueo de 
+rutinas que es necesario.
