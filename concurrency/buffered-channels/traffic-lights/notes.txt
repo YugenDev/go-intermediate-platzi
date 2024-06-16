@@ -1,0 +1,4 @@
+Aquí estamos utilizando las goroutines como si fueran semáforos
+limitamos la cantidad de datos que se puede enviar por un canal
+para que dentro de nuestro for loop todo se ejecute de manera concurrente
+y no bloque la ejecución del programa por un deadlock.

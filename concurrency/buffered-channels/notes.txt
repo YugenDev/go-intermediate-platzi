@@ -17,3 +17,22 @@ func main() {
   fmt.Println(<-c)
   fmt.Println(<-c)
 }
+
+imagina que los canales son como tuberías para enviar datos entre goroutines.
+
+Unbuffered channels: Son como tuberías muy delgadas donde solo cabe un dato a la vez. 
+Si una goroutine quiere enviar un dato, se queda bloqueada esperando a que otra goroutine lo reciba. 
+Es como si la tubería se tapara hasta que alguien del otro lado la destapa. Esto es útil para sincronizar 
+goroutines, asegurándote de que una espere a la otra.
+
+Buffered channels: Son como tuberías más anchas que pueden almacenar varios datos a la vez. 
+Una goroutine puede enviar datos sin bloquearse, siempre y cuando haya espacio en la tubería. 
+Solo se bloqueará si la tubería está llena. Esto permite más flexibilidad y asincronismo 
+entre goroutines.
+
+En resumen:
+
+Unbuffered: Sincronización, bloqueo hasta que emisor y receptor estén listos.
+Buffered: Mayor asincronismo, capacidad de almacenar datos temporalmente.
+
+
