@@ -1,0 +1,4 @@
+Multiplexación
+Cuando una rutina se está comunicando con varios channels es muy útil utilizar la palabra reservada 
+select para poder interactuar de una manera más ordenada con todos los mensajes que están siendo 
+recibidos.
