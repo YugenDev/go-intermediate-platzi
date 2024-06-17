@@ -29,8 +29,6 @@ func main(){
 
 	go Generator(c)
 	go Double(c, d)
-	println(d)
-	println(c)
 	PrintValues(d)
 	
 }
